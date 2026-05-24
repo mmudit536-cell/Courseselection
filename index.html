@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Selection Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            South Asian University
+        </div>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#courses">Courses</a></li>
+
+            <li><a href="#departments">Departments</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>
+                Course Selection Portal
+            </h1>
+
+            <p>
+                Welcome to South Asian University Course Portal.
+                Explore available courses and select the program
+                that matches your academic interests and career goals.
+            </p>
+
+            <button onclick="scrollToCourses()">
+                Explore Courses
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="selected-box">
+
+        <h2>
+            Selected Course
+        </h2>
+
+        <p id="selected-course">
+            No course selected
+        </p>
+
+    </section>
+
+    <section class="courses" id="courses">
+
+        <h2 class="heading">
+            Available Courses
+        </h2>
+
+        <div class="course-container">
+
+
+            <div class="card">
+
+                <img src="Im 1.jpg"
+                    alt="Web Development">
+
+                <div class="card-content">
+
+                    <h3>Web Development</h3>
+
+                    <p class="code">
+                        Course Code: CS301
+                    </p>
+
+                    <p>
+                        Learn HTML, CSS, JavaScript,
+                        responsive design, and backend basics.
+                    </p>
+
+                    <p>
+                        <strong>Department:</strong>
+                        Computer Science
+                    </p>
+
+                    <p>
+                        <strong>Instructor:</strong>
+                        Rahul Mehta
+                    </p>
+
+                    <button onclick="selectCourse('Web Development')">
+                        Select Course
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="im 2.jpg"
+                    alt="Python Programming">
+
+                <div class="card-content">
+
+                    <h3>Python Programming</h3>
+
+                    <p class="code">
+                        Course Code: IT204
+                    </p>
+
+                    <p>
+                        Understand Python fundamentals,
+                        OOP concepts, functions, and file handling.
+                    </p>
+
+                    <p>
+                        <strong>Department:</strong>
+                        Information Technology
+                    </p>
+
+                    <p>
+                        <strong>Instructor:</strong>
+                        Neha Sharma
+                    </p>
+
+                    <button onclick="selectCourse('Python Programming')">
+                        Select Course
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="Im 3.jpg"
+                    alt="Digital Electronics">
+
+                <div class="card-content">
+
+                    <h3>Digital Electronics</h3>
+
+                    <p class="code">
+                        Course Code: EC210
+                    </p>
+
+                    <p>
+                        Study logic gates, counters,
+                        flip-flops, and digital systems.
+                    </p>
+
+                    <p>
+                        <strong>Department:</strong>
+                        Electronics
+                    </p>
+
+                    <p>
+                        <strong>Instructor:</strong>
+                        Amit Verma
+                    </p>
+
+                    <button onclick="selectCourse('Digital Electronics')">
+                        Select Course
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="Im 4.jpg"
+                    alt="Database Management">
+
+                <div class="card-content">
+
+                    <h3>Database Management</h3>
+
+                    <p class="code">
+                        Course Code: DB305
+                    </p>
+
+                    <p>
+                        Learn SQL queries, ER models,
+                        normalization, and database design.
+                    </p>
+
+                    <p>
+                        <strong>Department:</strong>
+                        Information Systems
+                    </p>
+
+                    <p>
+                        <strong>Instructor:</strong>
+                        Priya Khanna
+                    </p>
+
+                    <button onclick="selectCourse('Database Management')">
+                        Select Course
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="departments" id="departments">
+
+        <h2 class="heading">
+            Departments
+        </h2>
+
+        <div class="department-container">
+
+            <div class="department-card">
+
+                <h3>Computer Science</h3>
+
+                <p>
+                    Focus on programming, software engineering,
+                    AI, and web technologies.
+                </p>
+
+            </div>
+
+            <div class="department-card">
+
+                <h3>Electronics</h3>
+
+                <p>
+                    Study communication systems,
+                    digital electronics, and VLSI design.
+                </p>
+
+            </div>
+
+            <div class="department-card">
+
+                <h3>Information Technology</h3>
+
+                <p>
+                    Learn databases, networking,
+                    cybersecurity, and cloud computing.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="contact-section" id="contact">
+
+        <h2 class="heading">
+            Contact Us
+        </h2>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>South Asian University</h3>
+
+                <p>
+                    New Delhi, India
+                </p>
+
+                <p>
+                    Email: Southasian uni @gmail.com
+                </p>
+
+                <p>
+                    Phone: +91 9876543210
+                </p>
+
+            </div>
+
+            <div class="contact-form">
+
+                <input type="text" placeholder="Enter Your Name">
+
+                <input type="email" placeholder="Enter Your Email">
+
+                <textarea placeholder="Enter Your Message"></textarea>
+
+                <button>
+                    Send Message
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 SOUTH ASIAN UNIVERSITY 
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
